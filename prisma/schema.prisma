@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Pilot {
+  id                  String @id() @default(uuid())
+  name                String
+  surname             String
+  driver_number       Int
+  team                Team   @relation(fields: [teamId], references: [id])
+  teamId              String
+  country             String
+  podiums             Int
+  total_points        String
+  gps_entered         Int
+  world_championships Int
+  highest_race_finish Int
+  highest_grid        Int
+  birth               String
+  birth_place         String
+  picture_url         String
+  bio                 String
+}
+
+model Team {
+  id                  String  @id @default(uuid())
+  full_name           String
+  base                String
+  team_chief          String
+  technical_chief     String
+  chasis              String
+  power_unit          String
+  first_entry         Int
+  world_championships Int
+  highest_race_finish Int
+  pole_positions      Int
+  fastest_laps        Int
+  logo_url            String
+  drivers             Pilot[]
+}

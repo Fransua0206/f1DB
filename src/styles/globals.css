@@ -1,0 +1,10 @@
+@tailwind base;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-800
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
