@@ -11,9 +11,14 @@ const prisma = new PrismaClient();
 
 const Home: NextPage = (props) => {
   return (
+    <>
+    <Head>
+      <title>Formula 1 Database | Cruise Level Software</title>
+    </Head>
     <Containter>
       <DriverDisplay props={props} />
     </Containter>
+    </>
   );
 };
 
