@@ -21,13 +21,17 @@ const DriverDisplay = (props: any) => {
               key={index}
               className="p-5 m-5 rounded-3xl w-80 h-fit min-h-[30rem] flex-col bg-slate-700 hover:w-[22rem] hover:min-h-[31rem] hover:m-2 transition-all"
             >
-              <Image
-                className="rounded-t-3xl rounded-b-3xl"
-                src={pilot.picture_url}
-                alt={`driver ${pilot.driver_number} ${pilot.name} ${pilot.surname}`}
-                height={"300px"}
-                width={"320px"}
-              />
+              <Link href={`/drivers/${pilot.id}`}>
+                <a>
+                  <Image
+                    className="rounded-t-3xl rounded-b-3xl"
+                    src={pilot.picture_url}
+                    alt={`driver ${pilot.driver_number} ${pilot.name} ${pilot.surname}`}
+                    height={"300px"}
+                    width={"320px"}
+                  />
+                </a>
+              </Link>
               <div className="flex flex-col px-5 pt-5">
                 <Link href={`/drivers/${pilot.id}`}>
                   <a>
