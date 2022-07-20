@@ -11,8 +11,8 @@ interface SingleDriverProps {
 
 const FullpageDriver = ({ driver, team }: SingleDriverProps) => {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row">
+    <div className="flex flex-col ">
+      <div className="flex flex-col items-center lg:flex-row">
         <div className="ml-10 mt-10">
           <Image
             className="rounded-3xl"

@@ -13,9 +13,9 @@ const FullpageTeam = (props: SingleTeamProps) => {
   const { team, drivers } = props;
   return (
     <>
-      <div className="flex flex-col ml-10 mt-10">
-        <div className="flex flex-row ">
-          <div className="">
+      <div className="flex flex-col ml-10 mt-10 mr-10">
+        <div className="flex flex-col items-center lg:flex-row">
+          <div className="mb-5">
             <Image
               className="rounded-3xl"
               src={team.logo_url}

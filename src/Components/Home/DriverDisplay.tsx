@@ -14,12 +14,12 @@ const DriverDisplay = (props: any) => {
 
   return (
     <>
-      <div className="grid gap-4 grid-cols-5 grid-rows-2">
+      <div className="grid gap-4 grid-cols-1 grid-rows-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {drivers.map((pilot, index) => {
           return (
             <div
               key={index}
-              className="p-5 m-5 rounded-3xl w-80 h-fit min-h-[30rem] flex-col bg-slate-700 hover:w-[22rem] hover:min-h-[31rem] hover:m-2 transition-all"
+              className="p-3 m-5 rounded-3xl w-80 h-fit min-h-[30rem] flex-col bg-slate-700 hover:w-[22rem] hover:min-h-[31rem] hover:m-2 transition-all"
             >
               <Link href={`/drivers/${pilot.id}`}>
                 <a>

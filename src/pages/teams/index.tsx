@@ -14,7 +14,7 @@ const AllTeams = (props: any) => {
         <title>All Teams</title>
       </Head>
       <Containter>
-        <div className="grid grid-cols-5 grid-rows-2">
+        <div className="grid gap-4 grid-cols-1 grid-rows-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {teams.map((team, index) => {
             return <TeamCard team={team} key={index} />;
           })}

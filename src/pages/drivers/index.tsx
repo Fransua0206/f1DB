@@ -17,7 +17,7 @@ const AllDrivers = (props: any) => {
         <title>All Drivers</title>
     </Head>
     <Containter>
-      <div className="grid gap-4 grid-cols-5 grid-rows-4">
+      <div className="grid gap-4 grid-cols-1 grid-rows-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {drivers.map((driver, index) => {
             const team = teams.find((team) => team.id === driver.teamId)!
             return <DriverCard key={index} driver={driver} team={team} />;
