@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const DriverDisplay = (props: any) => {
-  const drivers: Pilot[] = props.props.initialDrivers.slice(0, 10);
+  const drivers: Pilot[] = props.props.initialDrivers;
   const teams: Team[] = props.props.initialScuderias;
 
   const getTeam = (teamId: string): Team | undefined => {

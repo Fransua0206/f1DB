@@ -6,6 +6,7 @@ import Sidebar from "../Components/Sidebar/Sidebar";
 import styles from "../styles/Home.module.css";
 import Containter from "../utils/Containter";
 import { PrismaClient } from "@prisma/client";
+import { Pilot } from "../types/driver";
 
 const prisma = new PrismaClient();
 
@@ -26,9 +27,13 @@ export async function getStaticProps() {
   const drivers = await prisma.pilot.findMany();
   const teams = await prisma.team.findMany();
 
+  const sortedDrivers = drivers
+    .sort((a, b) => 0.5 - Math.random())
+    .slice(0, 10);
+
   return {
     props: {
-      initialDrivers: drivers,
+      initialDrivers: sortedDrivers,
       initialScuderias: teams
     },
   };
